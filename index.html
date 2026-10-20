@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Design for 3D Printing Roadmap</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #3ae7ff, #1d4ed8);
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .roadmap {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid var(--border-color);
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            left: calc(-2rem - 8px);
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+            border: 3px solid var(--bg-color);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover::before {
+            transform: scale(1.2);
+        }
+
+        .step-time {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .step-card li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .step-card li strong {
+            color: var(--text-main);
+        }
+
+        .step-card li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .branches {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .branches {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .branch-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .branch-title {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>3D Design for 3D Printing</h1>
+        <p>Lộ trình từ con số 0 đến sản phẩm thực tế</p>
+    </header>
+
+    <div class="roadmap">
+        <!-- Giai đoạn 1 -->
+        <div class="step">
+            <div class="step-time">Giai đoạn 1 • 1 - 2 Tuần</div>
+            <h2 class="step-title">Tư duy & Nguyên lý In 3D</h2>
+            <div class="step-card">
+                <ul>
+                    <li><strong>Additive Manufacturing:</strong> Hiểu cách máy in đắp từng lớp nhựa/resin chồng lên nhau.</li>
+                    <li><strong>Giới hạn vật lý:</strong> Học về góc nghiêng (Overhang), vật liệu đỡ (Support) và độ dày thành (Wall thickness).</li>
+                    <li><strong>Độ dung sai (Tolerance):</strong> Cách trừ hao kích thước khi thiết kế các khớp lắp ghép.</li>
+                    <li><strong>Định dạng file:</strong> Làm quen với cấu trúc lưới của file .STL, .OBJ, .3MF.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 2 -->
+        <div class="step">
+            <div class="step-time">Giai đoạn 2 • Chọn hướng đi</div>
+            <h2 class="step-title">Lựa chọn Phần mềm (Chọn 1 trong 2)</h2>
+            <div class="step-card">
+                <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">Chọn công cụ thiết kế phù hợp nhất với mục tiêu sản phẩm của bạn:</p>
+                <div class="branches">
+                    <div class="branch-card">
+                        <div class="branch-title">Nhánh A: Kỹ thuật / Cơ khí</div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Vỏ hộp, bánh răng, đồ gia dụng.</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-main);"><strong>Phần mềm:</strong> Fusion 360, SolidWorks, FreeCAD.</p>
+                    </div>
+                    <div class="branch-card">
+                        <div class="branch-title">Nhánh B: Mỹ thuật / Tượng</div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Nhân vật game, anime, cosplay, đồ hữu cơ.</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-main);"><strong>Phần mềm:</strong> Blender, ZBrush.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 3 -->
+        <div class="step">
+            <div class="step-time">Giai đoạn 3 • 1 - 2 Tháng</div>
+            <h2 class="step-title">Thực hành Dựng hình Cơ bản</h2>
+            <div class="step-card">
+                <ul>
+                    <li><strong>Trường phái CAD:</strong> Học vẽ Sketch 2D, ràng buộc hình học, lệnh Extrude, Revolve, Fillet, Boolean.</li>
+                    <li><strong>Trường phái Sculpting:</strong> Học thao tác không gian, quản lý lưới (Polygon) và sử dụng cọ nặn đất sét cơ bản.</li>
+                    <li><strong>Bài tập nhỏ:</strong> Thiết kế móc khóa, chậu cây, hộp nhựa hoặc các mô hình chibi đơn giản.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 4 -->
+        <div class="step">
+            <div class="step-time">Giai đoạn 4 • 2 Tuần</div>
+            <h2 class="step-title">Tối ưu hóa Mô hình (Design for AM)</h2>
+            <div class="step-card">
+                <ul>
+                    <li><strong>Kiểm tra Manifold:</strong> Đảm bảo mô hình "kín khối" 100%, không bị hở mặt hay trùng lưới.</li>
+                    <li><strong>Hollow & Drain holes:</strong> Kỹ thuật khoét rỗng và đục lỗ thoát nhựa (bắt buộc khi in Resin).</li>
+                    <li><strong>Cắt mẫu (Splitting & Keying):</strong> Cắt nhỏ mô hình lớn và tạo khớp nối để lắp ghép sau khi in.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 5 -->
+        <div class="step">
+            <div class="step-time">Giai đoạn 5 • 1 Tuần</div>
+            <h2 class="step-title">Làm chủ Phần mềm Cắt lát (Slicer)</h2>
+            <div class="step-card">
+                <ul>
+                    <li><strong>Chọn phần mềm:</strong> Cura, OrcaSlicer (cho máy nhựa cuộn FDM) hoặc Lychee, ChiTuBox (cho máy Resin).</li>
+                    <li><strong>Cài đặt thông số:</strong> Độ cao lớp in (Layer height), độ đặc (Infill), tốc độ và nhiệt độ.</li>
+                    <li><strong>Đặt hướng đặt mẫu (Orientation):</strong> Định vị mô hình trên bàn in để giảm thiểu lượng support tối đa.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Giai đoạn 6 -->
+        <div class="step">
+            <div class="step-time">Giai đoạn 6 • Liên tục</div>
+            <h2 class="step-title">In thử, Đối chiếu & Sửa đổi</h2>
+            <div class="step-card">
+                <ul>
+                    <li><strong>Đánh giá sản phẩm thực tế:</strong> Kiểm tra độ chịu lực, độ mịn bề mặt và độ chính xác của các khớp nối.</li>
+                    <li><strong>Tối ưu hóa vòng lặp:</strong> Sửa file thiết kế dựa trên các lỗi gặp phải khi in thực tế để rút kinh nghiệm.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 • Được thiết kế để chia sẻ trên GitHub Pages</p>
+    </footer>
+</div>
+
+</body>
+</html>
