@@ -155,6 +155,31 @@
             margin-bottom: 0.5rem;
             font-size: 0.95rem;
         }
+        
+        .web-apps {
+            margin-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+        
+        .web-apps-title {
+            font-weight: bold;
+            color: #f43f5e;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .web-badge {
+            background: rgba(244, 63, 94, 0.1);
+            color: #f43f5e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            border: 1px solid rgba(244, 63, 94, 0.2);
+        }
 
         footer {
             text-align: center;
@@ -199,13 +224,26 @@
                     <div class="branch-card">
                         <div class="branch-title">Nhánh A: Kỹ thuật / Cơ khí</div>
                         <p style="font-size: 0.85rem; color: var(--text-muted);">Vỏ hộp, bánh răng, đồ gia dụng.</p>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-main);"><strong>Phần mềm:</strong> Fusion 360, SolidWorks, FreeCAD.</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-main);"><strong>Phần mềm cài đặt:</strong> Fusion 360, SolidWorks, FreeCAD.</p>
                     </div>
                     <div class="branch-card">
                         <div class="branch-title">Nhánh B: Mỹ thuật / Tượng</div>
                         <p style="font-size: 0.85rem; color: var(--text-muted);">Nhân vật game, anime, cosplay, đồ hữu cơ.</p>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-main);"><strong>Phần mềm:</strong> Blender, ZBrush.</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem; color: var(--text-main);"><strong>Phần mềm cài đặt:</strong> Blender, ZBrush.</p>
                     </div>
+                </div>
+
+                <!-- BỔ SUNG CÁC CÔNG CỤ TRÊN WEB -->
+                <div class="web-apps">
+                    <div class="web-apps-title">
+                        <span>🌐 Giải pháp thiết kế trực tiếp trên trình duyệt Web (Không cần cài đặt)</span>
+                    </div>
+                    <ul style="margin-top: 0.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Tinkercad:</strong> Công cụ web miễn phí từ Autodesk. Rất tốt cho người mới bắt đầu lắp ghép các khối hình học cơ bản (FDM).</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Onshape:</strong> Phần mềm Parametric CAD thuần đám mây chuyên nghiệp, mạnh mẽ tương đương SolidWorks nhưng chạy hoàn toàn trên trình duyệt.</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>SculptGL / Nomad Web:</strong> Các công cụ web hỗ trợ điêu khắc (Sculpting) mô hình hữu cơ nhanh chóng mà không cần máy cấu hình mạnh.</li>
+                        <li><strong>Spline 3D:</strong> Hỗ trợ dựng hình khối và tạo mô hình phối cảnh trực quan, dễ dàng xuất file lưới sang môi trường in 3D.</li>
+                    </ul>
                 </div>
             </div>
         </div>
